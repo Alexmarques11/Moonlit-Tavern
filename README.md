@@ -3,9 +3,9 @@ Este projeto consiste em um jogo 2D de Tower Defense em visão top-down, desenvo
 
 ## Grupo
 
-- a25968 Alexandre Marques [https://github.com/Alexmarques11]
-- a25977 Miguel Sousa [https://github.com/MiguelVS2004]
-- a25959 Rui Costa [https://github.com/Rui2117]
+- 25968 [Alexandre Marques](https://github.com/Alexmarques11)
+- a25977 [Miguel Sousa](https://github.com/MiguelVS2004)
+- a25959 [Rui Costa](https://github.com/Rui2117)
 
 ## Controlos
 ### Modo Construção desativado
