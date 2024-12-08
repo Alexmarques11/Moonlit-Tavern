@@ -1,0 +1,64 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Enemy
+  - Building
+  - Drop
+  - Tavern
+  - Weapon
+  - InactiveBuilding
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - TileSet
+  - Water
+  - UI
+  - Building
+  - Enemy
+  - Projectile
+  - Drop
+  - InactiveBuilding
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Background
+    uniqueID: 4147836927
+    locked: 0
+  - name: Traps
+    uniqueID: 855005713
+    locked: 0
+  - name: Foreground
+    uniqueID: 2234283205
+    locked: 0
+  - name: test
+    uniqueID: 3249506405
+    locked: 0
+  - name: UI
+    uniqueID: 3873856229
+    locked: 0

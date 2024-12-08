@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 157c625acc5ba214aa3adb2111c0d7ad, type: 3}
+  m_Name: Gate
+  m_EditorClassIdentifier: 
+  nameString: Gate
+  prefab: {fileID: 4445220568178030624, guid: f3ffd863fca90524b901064d028ea7b3, type: 3}
+  visual: {fileID: 6670413483715375602, guid: c54a63d236f7334428a5c284d77be6f7, type: 3}
+  height: 1
+  width: 1
+  glueCost: 2
+  woodCost: 0
+  stoneCost: 4
+  maxAmount: 0
+  placedAmount: 0
+  isRotatable: 0
+  descriptionString: Can be opened to grant passage to the player or closed to keep
+    enemies away.

@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 157c625acc5ba214aa3adb2111c0d7ad, type: 3}
+  m_Name: MageTower
+  m_EditorClassIdentifier: 
+  nameString: Mage Tower
+  prefab: {fileID: 6028102716591358721, guid: e899acc4173b055458d0fbb28b7335db, type: 3}
+  visual: {fileID: 5630546519392295988, guid: e0302057cfb88d44384fc0f8555f245f, type: 3}
+  height: 1
+  width: 1
+  glueCost: 20
+  woodCost: 0
+  stoneCost: 15
+  maxAmount: 1
+  placedAmount: 0
+  isRotatable: 0
+  descriptionString: Allows the player to buy a wand and upgrade it.

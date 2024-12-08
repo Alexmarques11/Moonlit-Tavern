@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 157c625acc5ba214aa3adb2111c0d7ad, type: 3}
+  m_Name: Wall_Horizontal
+  m_EditorClassIdentifier: 
+  nameString: Wall
+  prefab: {fileID: 6377971925364125712, guid: 56f4daa024c03e7488dea2c250f4baca, type: 3}
+  visual: {fileID: 815522345080868409, guid: f6a46def3877c324fb7dbeab10c73dca, type: 3}
+  height: 1
+  width: 1
+  glueCost: 2
+  woodCost: 0
+  stoneCost: 1
+  maxAmount: 16
+  placedAmount: 35
+  isRotatable: 0
+  descriptionString: Walls to keep the enemies away. Its high health value slows
+    down the enemy's advance.
