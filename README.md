@@ -557,8 +557,9 @@ private void HandleMovementBehavior()
 - ***Nodes*** - Pequenas secções da Grid que servem para verificar se é possivel andar nessa zona da Grid. 
 - ***Path Request Manager*** - Gere os pedidos de cada unit para que a aplicação não fique muito pesada.
 - ***Units*** - Objeto que procurará o seu objetivo e que depois de encontrado irá prosseguir até o alcançar evitando obstaculos.
-- 
+- ***Heap*** - Estrutura de dados que mantém seus elementos organizados de forma a permitir acesso eficiente ao menor elemento.
 
+Na criação de um enemigo, o mesmo, irá enviar um pedido de caminho ao Path Request Manager para encontrar o caminho mais curto até ao seu objetivo.
 
 ### Visualização do resultado
 
