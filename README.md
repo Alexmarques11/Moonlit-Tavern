@@ -504,5 +504,7 @@ public class EnemyBuildingAI : MonoBehaviour
 }
 
 ```
-
  
+## Pathfinding com A*
+
+###
