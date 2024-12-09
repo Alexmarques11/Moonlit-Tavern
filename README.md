@@ -545,7 +545,9 @@ private void HandleMovementBehavior()
 ```
 
 -Se o inimigo encontrar um edifício próximo(***DetectBuildingNearby()***), ele move-se na direção do edifício.
+
 -Se não encontrar um edifício próximo, ele procura a taverna.
+
 -Se o inimigo for incapaz de encontrar tanto os edifícios como a taverna, ele para o movimento.
  
 ## Pathfinding com A*
