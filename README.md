@@ -507,7 +507,15 @@ public class EnemyBuildingAI : MonoBehaviour
  
 ## Pathfinding com A*
 
-### 
+### Elementos
+- ***Grid*** - É uma grade (grid) criada uma classe que pede duas medidas X/Y e o tamanho de cada Node, que definem o tamando da grid onde os enimigos podem andar e o tamanho dos Nodes/Quadrados dentro da grid. 
+- ***Nodes*** - Pequenas secções da Grid que servem para verificar se é possivel andar nessa zona da Grid. 
+- ***Path Request Manager*** - Gere os pedidos de cada unit para que a aplicação não fique muito pesada.
+- ***Units*** - Objeto que procurará o seu objetivo e que depois de encontrado irá prosseguir até o alcançar evitando obstaculos.
+- 
+
+
+### Visualização do resultado
 
 ![image](https://github.com/user-attachments/assets/d43d03a8-aa9d-412e-82d0-2807991d3001)
 
