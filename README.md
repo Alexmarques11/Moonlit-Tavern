@@ -559,10 +559,12 @@ private void HandleMovementBehavior()
 - ***Units*** - Objeto que procurará o seu objetivo e que depois de encontrado irá prosseguir até o alcançar evitando obstaculos.
 - ***Heap*** - Estrutura de dados que mantém seus elementos organizados de forma a permitir acesso eficiente ao menor elemento.
 
-Na criação de um enemigo, o mesmo, irá enviar um pedido de caminho ao Path Request Manager para encontrar o caminho mais curto até ao seu objetivo.
+Na criação de um inimigo, o mesmo, irá enviar um pedido de caminho ao Path Request Manager para encontrar o caminho mais curto até ao seu objetivo.
 
 ### Visualização do resultado
 
 ![image](https://github.com/user-attachments/assets/d43d03a8-aa9d-412e-82d0-2807991d3001)
+Os quadrados brancos são os quadrados que a Unit pode-se mover e os quadrados vermelhos são os quadrados que são impossiveis de se mover
 
 ![image](https://github.com/user-attachments/assets/8f08eeaa-b63f-4b84-9a4f-b46036c3e771)
+A linha preta é o caminho que a Unit irá percorrer até ao seu objetivo
