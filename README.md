@@ -559,12 +559,22 @@ private void HandleMovementBehavior()
 - ***Units*** - Objeto que procurará o seu objetivo e que depois de encontrado irá prosseguir até o alcançar evitando obstaculos.
 - ***Heap*** - Estrutura de dados que mantém seus elementos organizados de forma a permitir acesso eficiente ao menor elemento.
 
-Na criação de um inimigo, o mesmo, irá enviar um pedido de caminho ao Path Request Manager para encontrar o caminho mais curto até ao seu objetivo.
+## Explicação
+
+O algoritmo A* em um sistema de pathfinding funciona através das unidades solicitarem caminhos ao gerente de requisições, que organiza essas demandas em uma fila. O A* busca o caminho mais eficiente no grid, usando um min-heap para priorizar a expansão de nós com menor custo total f(n)=g(n)+h(n). Cada nó representa uma célula navegável no grid, com custos e conexões predefinidos. Após calcular o caminho, o gerente retorna a rota à unidade. Esse sistema permite gerenciar múltiplas buscas de forma eficiente, dividindo processamento quando necessário.
+
+## Exemplo prático
+- Uma Unit solicita um caminho para o destino.
+- O Path Request Manager adiciona essa solicitação à fila.
+- No próximo quadro, o Path Request Manager processa a solicitação:
+-- Inicializa o A*, usando o heap para explorar o grid de forma eficiente.
+-- Após encontrar o caminho, retorna a lista de nós (ou posições no mapa) para a unidade.
+- A unidade segue o caminho enquanto o sistema gerencia outras solicitações.
 
 ### Visualização do resultado
 
 ![image](https://github.com/user-attachments/assets/d43d03a8-aa9d-412e-82d0-2807991d3001)
-Os quadrados brancos são os quadrados que a Unit pode-se mover e os quadrados vermelhos são os quadrados que são impossiveis de se mover
+- Os quadrados brancos são os quadrados que a Unit pode-se mover e os quadrados vermelhos são os quadrados que são impossiveis de se mover
 
 ![image](https://github.com/user-attachments/assets/8f08eeaa-b63f-4b84-9a4f-b46036c3e771)
-A linha preta é o caminho que a Unit irá percorrer até ao seu objetivo
+- A linha preta é o caminho que a Unit irá percorrer até ao seu objetivo
