@@ -504,6 +504,49 @@ public class EnemyBuildingAI : MonoBehaviour
 }
 
 ```
+
+### Análise
+
+A raiz da árvore de comportamento está representada no método ***Update()***, que é chamado a cada frame. Nela, o agente executa as condições de forma sequencial.
+
+´´´cs
+void Update()
+{
+    if (IsAttacking())
+        StopMovement();
+    else
+        HandleMovementBehavior();
+}
+
+´´´
+
+- Se o inimigo estiver a atacar(verificado pela função ***IsAttacking()***), ele para o movimento.
+- Caso contrário, a árvore continua para a função ***HandleMovementBehaviour()***.
+
+Se o inimigo não estiver a atacar, ele segue para a função ***HandleMovementBehaviour()***:
+
+´´´cs
+private void HandleMovementBehavior()
+{
+    if (!DetectBuildingsNearby())
+    {
+        FindTavern();
+    }
+
+    if (target != null)
+    {
+        MoveToTarget();
+    }
+    else
+    {
+        StopMovement();
+    }
+}
+´´´
+
+-Se o inimigo encontrar um edifício próximo(***DetectBuildingNearby()***), ele move-se na direção do edifício.
+-Se não encontrar um edifício próximo, ele procura a taverna.
+-Se o inimigo for incapaz de encontrar tanto os edifícios como a taverna, ele para o movimento.
  
 ## Pathfinding com A*
 
