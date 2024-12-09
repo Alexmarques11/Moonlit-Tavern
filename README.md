@@ -253,7 +253,7 @@ private enum State
 *MoveToPLayer:* O inimigo movimenta-se em direção ao jogador, priorizando-o acima de qualquer outro alvo ou edifício.
 *Idle:* Na ausência do jogador e de construções no alcance, o inimigo permanece imóvel.
 
-***Estados e Transições***
+### Estados e Transições
 
 ```cs
 private void UpdateState()
@@ -331,13 +331,13 @@ private void UpdateState()
 -No estado Idle, o inimigo não realiza nenhuma ação ativa, ficando imóvel.
 -Este estado é usado como fallback, quando não há jogadores nem construções no alcance.
 
-***Transições***
+### Transições
 As transições entre estados são definidas na função UpdateState(). Essa função avalia as condições do ambiente (presença de jogador, edifícios ou taverna) para determinar o próximo estado.
 
 ***Por exemplo:***
 Se um jogador é detectado, o estado muda para MoveToPlayer. Se não há jogadores, mas existem edifícios no alcance, o estado muda para MoveToBuilding. Se nenhum dos dois é encontrado, a prioridade é a taverna, mudando o estado para MoveToTavern. Caso contrário, o inimigo fica em Idle.
 
-***Execução do Estado***
+### Execução do Estado
 A função ExecuteState() aplica as ações associadas ao estado atual:
 -Inicia animações apropriadas (animator.SetBool("isMoving", true) ou false).
 -Ajusta o movimento usando MoveToTarget(), que calcula a direção e velocidade baseada no alvo.
