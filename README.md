@@ -359,7 +359,7 @@ A função ExecuteState() aplica as ações associadas ao estado atual:
 
 -Ajusta o movimento usando MoveToTarget(), que calcula a direção e velocidade baseada no alvo.
 
-##Behaviour Tree (Árvore de Comportamentos):
+## Behaviour Tree (Árvore de Comportamentos):
 A Behaviour Tree é um modelo computacional usado para organizar e controlar o comportamento de agentes, especialmente em inteligência artificial de jogos. Diferente da State Machine, que possui transições diretas entre estados, a Behaviour Tree é composta por uma hierarquia de nodes que definem tarefas e condições.
 
 ```cs
