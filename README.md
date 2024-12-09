@@ -248,13 +248,13 @@ private enum State
         Idle
     }
 ```
-*MoveToTavern:* O inimigo desloca-se em direção ao edifício principal (a taverna).
+***MoveToTavern:*** O inimigo desloca-se em direção ao edifício principal (a taverna).
 
-*MoveToBuilding:* Caso exista um edifício que não seja a taverna, o inimigo direciona-se para ele.
+***MoveToBuilding:*** Caso exista um edifício que não seja a taverna, o inimigo direciona-se para ele.
 
-*MoveToPLayer:* O inimigo movimenta-se em direção ao jogador, priorizando-o acima de qualquer outro alvo ou edifício.
+***MoveToPLayer:*** O inimigo movimenta-se em direção ao jogador, priorizando-o acima de qualquer outro alvo ou edifício.
 
-*Idle:* Na ausência do jogador e de construções no alcance, o inimigo permanece imóvel.
+***Idle:***Na ausência do jogador e de construções no alcance, o inimigo permanece imóvel.
 
 ### Estados e Transições
 
