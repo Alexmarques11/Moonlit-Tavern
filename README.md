@@ -507,4 +507,8 @@ public class EnemyBuildingAI : MonoBehaviour
  
 ## Pathfinding com A*
 
-###
+### 
+
+![image](https://github.com/user-attachments/assets/d43d03a8-aa9d-412e-82d0-2807991d3001)
+
+![image](https://github.com/user-attachments/assets/8f08eeaa-b63f-4b84-9a4f-b46036c3e771)
