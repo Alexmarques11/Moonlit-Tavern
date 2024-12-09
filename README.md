@@ -313,6 +313,7 @@ private void UpdateState()
 ```
 
 ***MoveToTavern:***
+
 -Neste estado, o inimigo foca-se em atacar o edifício principal (a taverna).
 
 -A lógica do estado procura o objeto "Tavern" na cena e move o inimigo na sua direção, ajustando o movimento com base na posição atual da taverna.
@@ -320,6 +321,7 @@ private void UpdateState()
 -Este estado é acionado quando não há jogadores ou outros edifícios no alcance.
 
 ***MoveToBuilding:***
+
 -Caso o inimigo detecte um edifício que não seja a taverna, ele muda para este estado.
 
 -Um edifício no alcance é identificado através de um raio de deteção, e o inimigo move-se em direção a ele para atacá-lo.
@@ -327,6 +329,7 @@ private void UpdateState()
 -Este comportamento é útil para priorizar objetivos estratégicos antes da taverna.
 
 ***MoveToPlayer:***
+
 -Este estado é acionado quando o jogador entra no raio de deteção.
 
 -O inimigo considera o jogador como a maior prioridade, movendo-se diretamente para atacá-lo.
@@ -334,6 +337,7 @@ private void UpdateState()
 -O script verifica continuamente a posição do jogador e ajusta a direção do movimento.
 
 ***Idle:***
+
 -No estado Idle, o inimigo não realiza nenhuma ação ativa, ficando imóvel.
 
 -Este estado é usado como fallback, quando não há jogadores nem construções no alcance.
@@ -342,10 +346,12 @@ private void UpdateState()
 As transições entre estados são definidas na função UpdateState(). Essa função avalia as condições do ambiente (presença de jogador, edifícios ou taverna) para determinar o próximo estado.
 
 ***Por exemplo:***
+
 Se um jogador é detectado, o estado muda para MoveToPlayer. Se não há jogadores, mas existem edifícios no alcance, o estado muda para MoveToBuilding. Se nenhum dos dois é encontrado, a prioridade é a taverna, mudando o estado para MoveToTavern. Caso contrário, o inimigo fica em Idle.
 
 ### Execução do Estado
 A função ExecuteState() aplica as ações associadas ao estado atual:
+
 -Inicia animações apropriadas (animator.SetBool("isMoving", true) ou false).
 
 -Ajusta o movimento usando MoveToTarget(), que calcula a direção e velocidade baseada no alvo.
