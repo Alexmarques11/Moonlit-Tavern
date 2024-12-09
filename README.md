@@ -314,21 +314,28 @@ private void UpdateState()
 
 ***MoveToTavern:***
 -Neste estado, o inimigo foca-se em atacar o edifício principal (a taverna).
+
 -A lógica do estado procura o objeto "Tavern" na cena e move o inimigo na sua direção, ajustando o movimento com base na posição atual da taverna.
+
 -Este estado é acionado quando não há jogadores ou outros edifícios no alcance.
 
 ***MoveToBuilding:***
 -Caso o inimigo detecte um edifício que não seja a taverna, ele muda para este estado.
+
 -Um edifício no alcance é identificado através de um raio de deteção, e o inimigo move-se em direção a ele para atacá-lo.
+
 -Este comportamento é útil para priorizar objetivos estratégicos antes da taverna.
 
 ***MoveToPlayer:***
 -Este estado é acionado quando o jogador entra no raio de deteção.
+
 -O inimigo considera o jogador como a maior prioridade, movendo-se diretamente para atacá-lo.
+
 -O script verifica continuamente a posição do jogador e ajusta a direção do movimento.
 
 ***Idle:***
 -No estado Idle, o inimigo não realiza nenhuma ação ativa, ficando imóvel.
+
 -Este estado é usado como fallback, quando não há jogadores nem construções no alcance.
 
 ### Transições
@@ -340,6 +347,7 @@ Se um jogador é detectado, o estado muda para MoveToPlayer. Se não há jogador
 ### Execução do Estado
 A função ExecuteState() aplica as ações associadas ao estado atual:
 -Inicia animações apropriadas (animator.SetBool("isMoving", true) ou false).
+
 -Ajusta o movimento usando MoveToTarget(), que calcula a direção e velocidade baseada no alvo.
 
 
