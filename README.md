@@ -359,8 +359,19 @@ A função ExecuteState() aplica as ações associadas ao estado atual:
 
 -Ajusta o movimento usando MoveToTarget(), que calcula a direção e velocidade baseada no alvo.
 
+
 ## Behaviour Tree (Árvore de Comportamentos):
 A Behaviour Tree é um modelo computacional usado para organizar e controlar o comportamento de agentes, especialmente em inteligência artificial de jogos. Diferente da State Machine, que possui transições diretas entre estados, a Behaviour Tree é composta por uma hierarquia de nodes que definem tarefas e condições.
+
+### Implementação da Behaviour Tree
+
+No nosso jogo, utilizamos uma Behaviour Tree para definir o comportamento dos inimigos que atacam edifícios. Diferente da State Machine, onde as transições entre estados são bem definidas, a Behaviour Tree permite uma lógica mais flexível e reativa, que se adapta automaticamente ao ambiente.
+
+A implementação da Behaviour Tree está contida num script chamado "EnemyBuildingAI". Este inimigo prioriza segue a lógica seguinte:
+- Se estiver a atacar, para o movimento.
+- Se houver um edifício próximo (excluindo a taverna), move-se na direção desse edifício.
+- Se não encontrar nenhum edifício, aproxima-se da taverna.
+- Se não encontrar a taverna, para o movimento.
 
 ```cs
 
@@ -492,5 +503,6 @@ public class EnemyBuildingAI : MonoBehaviour
     }
 }
 
-```  
-  
+```
+
+ 
