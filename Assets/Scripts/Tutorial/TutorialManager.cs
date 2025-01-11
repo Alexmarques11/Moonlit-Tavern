@@ -9,6 +9,7 @@ public class TutorialManager : MonoBehaviour
     public GameObject thirdDialogue;
     private bool dialogueTriggered = false;
     private bool thirdDialogueStarted = false;
+    public bool isSecondDialogueFinished = false;
 
     public GameObject buildSystem;
     public GameObject buildUI;
@@ -40,6 +41,9 @@ public class TutorialManager : MonoBehaviour
             {
                 exitConstructionMode.SetActive(false);
                 enterNightMode.SetActive(true);
+                isSecondDialogueFinished = true;
+                aim.SetActive(true);
+                Debug.Log("Second dialogue finished" + isSecondDialogueFinished);
             }
         }
 

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 157c625acc5ba214aa3adb2111c0d7ad, type: 3}
   m_Name: CrossBow
   m_EditorClassIdentifier: 
-  nameString: CrossBow
+  nameString: Archer Tower
   prefab: {fileID: 6415047826782266041, guid: 66d45a25b8ee63f4ea5d8480ebfcdf0a, type: 3}
   visual: {fileID: 69717170964000813, guid: e447072fe63f7e94f8b6c28606764e46, type: 3}
   height: 1
@@ -21,6 +21,6 @@ MonoBehaviour:
   woodCost: 5
   stoneCost: 5
   maxAmount: 4
-  placedAmount: 5
+  placedAmount: 0
   isRotatable: 0
   descriptionString: Attacks enemies automatically using its arrows.

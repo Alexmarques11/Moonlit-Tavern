@@ -4,7 +4,7 @@ using UnityEngine;
 public class Unit : MonoBehaviour
 {
     public Transform target;
-    float speed = 10;
+    public float speed = 10;
 
     Vector3[] path;
     int targetIndex;
@@ -21,6 +21,11 @@ public class Unit : MonoBehaviour
             path = newPath;
             StopCoroutine("FollowPath");
             StartCoroutine("FollowPath");
+        }
+        if(!pathSuccessful)
+        {
+            EnemyBuildingAI enemyBuildingAi = GetComponent<EnemyBuildingAI>();
+            enemyBuildingAi.enabled = true;
         }
     }
 

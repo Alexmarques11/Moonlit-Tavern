@@ -39,6 +39,7 @@ public class AlchemistMenu : MonoBehaviour
         if (closeMenuButton != null)
             closeMenuButton.onClick.AddListener(CloseMenu);
 
+
         if (buyHealthPotionButton != null)
             buyHealthPotionButton.onClick.AddListener(BuyHealthPotion);
 
@@ -47,6 +48,14 @@ public class AlchemistMenu : MonoBehaviour
 
         healthPotionPriceText.text = $"Price: {healthPotionPrice}";
         thunderPotionPriceText.text = $"Price: {thunderPotionPrice}";
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            gameObject.SetActive(false);
+        }
     }
 
     public void OpenMenu()

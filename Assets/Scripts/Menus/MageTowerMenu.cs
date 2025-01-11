@@ -86,6 +86,12 @@ public class MageTowerMenu : MonoBehaviour
     {
         UpdateSelectedWeapon();
         UpdateMenu();
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            gameObject.SetActive(false);
+        }
+
     }
 
     void UpdateSelectedWeapon()
@@ -104,7 +110,7 @@ public class MageTowerMenu : MonoBehaviour
     {
         if (playerXP != null)
         {
-            string currentXPColor = playerXP.currentXP >= xpRequiredForWeaponUpgrade ? "#00FF00" : "#FF0000";
+            string currentXPColor = playerXP.currentXP >= xpRequiredForWeaponUpgrade ? "#7BDF4D" : "#E11616";
             playerXPText.text = $"<color={currentXPColor}>{playerXP.currentXP}</color> / {xpRequiredForWeaponUpgrade} XP";
         }
     }

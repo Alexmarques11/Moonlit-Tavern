@@ -1,5 +1,87 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &349628356589705146
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8763896091324600466}
+  - component: {fileID: 1067531173342278805}
+  m_Layer: 6
+  m_Name: Light 2DTavernLantern
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8763896091324600466
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 349628356589705146}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 6.12, y: 1.4560001, z: 0}
+  m_LocalScale: {x: 2, y: 2, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5302467768208204280}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1067531173342278805
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 349628356589705146}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 073797afb82c5a1438f328866b10b3f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ComponentVersion: 1
+  m_LightType: 3
+  m_BlendStyleIndex: 0
+  m_FalloffIntensity: 0.516
+  m_Color: {r: 0.93207544, g: 0.50546527, b: 0.13189735, a: 1}
+  m_Intensity: 1
+  m_LightVolumeIntensity: 1
+  m_LightVolumeIntensityEnabled: 0
+  m_ApplyToSortingLayers: 00000000fff73af7115af632c5742c856588afc1e55ae6e6
+  m_LightCookieSprite: {fileID: 0}
+  m_DeprecatedPointLightCookieSprite: {fileID: 0}
+  m_LightOrder: 0
+  m_AlphaBlendOnOverlap: 0
+  m_OverlapOperation: 0
+  m_NormalMapDistance: 3
+  m_NormalMapQuality: 2
+  m_UseNormalMap: 0
+  m_ShadowIntensityEnabled: 0
+  m_ShadowIntensity: 0.75
+  m_ShadowVolumeIntensityEnabled: 0
+  m_ShadowVolumeIntensity: 0.75
+  m_LocalBounds:
+    m_Center: {x: 0, y: -0.00000011920929, z: 0}
+    m_Extent: {x: 0.9985302, y: 0.99853027, z: 0}
+  m_PointLightInnerAngle: 360
+  m_PointLightOuterAngle: 360
+  m_PointLightInnerRadius: 0.53
+  m_PointLightOuterRadius: 6.89
+  m_ShapeLightParametricSides: 5
+  m_ShapeLightParametricAngleOffset: 0
+  m_ShapeLightParametricRadius: 1
+  m_ShapeLightFalloffSize: 0.5
+  m_ShapeLightFalloffOffset: {x: 0, y: 0}
+  m_ShapePath:
+  - {x: -0.5, y: -0.5, z: 0}
+  - {x: 0.5, y: -0.5, z: 0}
+  - {x: 0.5, y: 0.5, z: 0}
+  - {x: -0.5, y: 0.5, z: 0}
 --- !u!1 &2375852955987552714
 GameObject:
   m_ObjectHideFlags: 0
@@ -11,7 +93,7 @@ GameObject:
   - component: {fileID: 4792447015396018587}
   - component: {fileID: 2332703390032952807}
   - component: {fileID: 1304644822109357828}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: HealthBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27,7 +109,7 @@ RectTransform:
   m_GameObject: {fileID: 2375852955987552714}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.04016704, y: 0.09382387, z: 0.061820175}
+  m_LocalScale: {x: 0.04499512, y: 0.1051015, z: 0.06925096}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6959337668583553549}
@@ -36,7 +118,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -221.69, y: -118.07}
+  m_AnchoredPosition: {x: -222.02, y: -117.74}
   m_SizeDelta: {x: 160, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2332703390032952807
@@ -103,6 +185,88 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slider: {fileID: 2332703390032952807}
+--- !u!1 &3479700077854975123
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5919156520809618419}
+  - component: {fileID: 4856044790068216449}
+  m_Layer: 6
+  m_Name: 'Light 2DTavern '
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5919156520809618419
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3479700077854975123}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 2.18, y: 2.28, z: 0}
+  m_LocalScale: {x: 2, y: 2, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5302467768208204280}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4856044790068216449
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3479700077854975123}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 073797afb82c5a1438f328866b10b3f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ComponentVersion: 1
+  m_LightType: 3
+  m_BlendStyleIndex: 0
+  m_FalloffIntensity: 0.5
+  m_Color: {r: 0.93207544, g: 0.50546527, b: 0.13189735, a: 1}
+  m_Intensity: 1
+  m_LightVolumeIntensity: 1
+  m_LightVolumeIntensityEnabled: 0
+  m_ApplyToSortingLayers: 00000000fff73af7115af632c5742c856588afc1e55ae6e6
+  m_LightCookieSprite: {fileID: 0}
+  m_DeprecatedPointLightCookieSprite: {fileID: 0}
+  m_LightOrder: 0
+  m_AlphaBlendOnOverlap: 0
+  m_OverlapOperation: 0
+  m_NormalMapDistance: 3
+  m_NormalMapQuality: 2
+  m_UseNormalMap: 0
+  m_ShadowIntensityEnabled: 0
+  m_ShadowIntensity: 0.75
+  m_ShadowVolumeIntensityEnabled: 0
+  m_ShadowVolumeIntensity: 0.75
+  m_LocalBounds:
+    m_Center: {x: 0, y: -0.00000011920929, z: 0}
+    m_Extent: {x: 0.9985302, y: 0.99853027, z: 0}
+  m_PointLightInnerAngle: 360
+  m_PointLightOuterAngle: 360
+  m_PointLightInnerRadius: 1.18
+  m_PointLightOuterRadius: 4.48
+  m_ShapeLightParametricSides: 5
+  m_ShapeLightParametricAngleOffset: 0
+  m_ShapeLightParametricRadius: 1
+  m_ShapeLightFalloffSize: 0.5
+  m_ShapeLightFalloffOffset: {x: 0, y: 0}
+  m_ShapePath:
+  - {x: -0.5, y: -0.5, z: 0}
+  - {x: 0.5, y: -0.5, z: 0}
+  - {x: 0.5, y: 0.5, z: 0}
+  - {x: -0.5, y: 0.5, z: 0}
 --- !u!1 &4639613284751832784
 GameObject:
   m_ObjectHideFlags: 0
@@ -114,7 +278,7 @@ GameObject:
   - component: {fileID: 8863917510279698328}
   - component: {fileID: 8039312732519165186}
   - component: {fileID: 6974440221511696699}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Fill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -188,14 +352,14 @@ GameObject:
   m_Component:
   - component: {fileID: 5302467768208204280}
   - component: {fileID: 5400657457995956995}
-  - component: {fileID: 3289490145115295259}
   - component: {fileID: 5755100360684002446}
   - component: {fileID: 6566007499911365046}
   - component: {fileID: 1326639999098556353}
   - component: {fileID: 9165023451231527658}
-  m_Layer: 6
+  - component: {fileID: 4553604176902359896}
+  m_Layer: 0
   m_Name: Tavern
-  m_TagString: Building
+  m_TagString: Tavern
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -213,6 +377,9 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 8763896091324600466}
+  - {fileID: 5919156520809618419}
+  - {fileID: 8593933442140188557}
   - {fileID: 1006051343471468388}
   - {fileID: 895265218342345534}
   m_Father: {fileID: 0}
@@ -244,7 +411,76 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!60 &3289490145115295259
+--- !u!114 &5755100360684002446
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5482850926277436116}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2da7704384a6c0d4e97e00e6859befee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GameOverScene: GameOver
+--- !u!114 &6566007499911365046
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5482850926277436116}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09d135d6b13d300449b9a97682b3a0c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buildingName: tavern
+  health: 0
+  maxHealth: 1000
+  healthBar: {fileID: 1304644822109357828}
+  prefabVisualRenderer: {fileID: 4652523209533091192}
+  buildingLights:
+  - {fileID: 1067531173342278805}
+  - {fileID: 4856044790068216449}
+  - {fileID: 3397585089849811718}
+--- !u!114 &1326639999098556353
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5482850926277436116}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb9de46c9ca58f945a6d3eb1559c450a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactText: Tavern
+  gateVisual: {fileID: 0}
+  selectedWeapon: 0
+  tavernMenuPrefab: {fileID: 2159601151222503252, guid: 74a39464cdc009644a3d0ba250b4b87c, type: 3}
+  blacksmithMenuPrefab: {fileID: 0}
+  alchemistMenuPrefab: {fileID: 0}
+  magetowerMenuPrefab: {fileID: 0}
+  huntershouseMenuPrefab: {fileID: 0}
+  textObject: {fileID: 0}
+  textComponent: {fileID: 0}
+--- !u!114 &9165023451231527658
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5482850926277436116}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63ee1d15b286f494897ca9d4f5285bc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  placedObjectType: {fileID: 0}
+--- !u!60 &4553604176902359896
 PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -288,77 +524,22 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0.8065374, y: 6.445037}
-      - {x: 0.7427206, y: 0.86017895}
-      - {x: 2.6216354, y: 0.88857245}
-      - {x: 2.6065438, y: -0.40530276}
-      - {x: 7.0964804, y: -0.40605772}
-      - {x: 7.1136966, y: 1.7851317}
-      - {x: 7.169019, y: 3.9502962}
-      - {x: 7.2101774, y: 6.4979873}
+    - - {x: 4.0577564, y: 5.884564}
+      - {x: 0.9757366, y: 5.491734}
+      - {x: -0.35848308, y: 5.3749833}
+      - {x: -0.4387288, y: 2.1594276}
+      - {x: 0.19994223, y: 2.1006408}
+      - {x: 0.24160677, y: -0.43722045}
+      - {x: 1.2542565, y: -0.75934947}
+      - {x: 1.6641669, y: -0.87959146}
+      - {x: 3.0652857, y: -0.83158636}
+      - {x: 3.6863694, y: -0.4402622}
+      - {x: 7.7654357, y: -0.46494627}
+      - {x: 7.774183, y: 2.0487313}
+      - {x: 8.41395, y: 2.0709524}
+      - {x: 8.402726, y: 2.7719102}
+      - {x: 8.379448, y: 5.4098263}
   m_UseDelaunayMesh: 0
---- !u!114 &5755100360684002446
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5482850926277436116}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2da7704384a6c0d4e97e00e6859befee, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  GameOverScene: GameOver
---- !u!114 &6566007499911365046
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5482850926277436116}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 09d135d6b13d300449b9a97682b3a0c8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  buildingName: tavern
-  health: 0
-  maxHealth: 1000
-  healthBar: {fileID: 1304644822109357828}
-  prefabVisualRenderer: {fileID: 4652523209533091192}
-  buildingLight: {fileID: 0}
---- !u!114 &1326639999098556353
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5482850926277436116}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bb9de46c9ca58f945a6d3eb1559c450a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  interactText: Tavern
-  damageIncreaseAmount: 1
-  gateVisual: {fileID: 0}
-  tavernMenuPrefab: {fileID: 2159601151222503252, guid: 74a39464cdc009644a3d0ba250b4b87c, type: 3}
-  textObject: {fileID: 0}
-  textComponent: {fileID: 0}
---- !u!114 &9165023451231527658
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5482850926277436116}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 63ee1d15b286f494897ca9d4f5285bc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  placedObjectType: {fileID: 0}
 --- !u!1 &6838293038668935628
 GameObject:
   m_ObjectHideFlags: 0
@@ -371,7 +552,7 @@ GameObject:
   - component: {fileID: 3754576258881783145}
   - component: {fileID: 4376126590311757822}
   - component: {fileID: 6389575342920067674}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -461,6 +642,88 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!1 &8048864587469919604
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8593933442140188557}
+  - component: {fileID: 3397585089849811718}
+  m_Layer: 0
+  m_Name: Light 2D
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8593933442140188557
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8048864587469919604}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 4.42, y: 4, z: 0}
+  m_LocalScale: {x: 2, y: 2, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5302467768208204280}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3397585089849811718
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8048864587469919604}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 073797afb82c5a1438f328866b10b3f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ComponentVersion: 1
+  m_LightType: 3
+  m_BlendStyleIndex: 0
+  m_FalloffIntensity: 0.516
+  m_Color: {r: 0.93207544, g: 0.50546527, b: 0.13189735, a: 1}
+  m_Intensity: 1
+  m_LightVolumeIntensity: 1
+  m_LightVolumeIntensityEnabled: 0
+  m_ApplyToSortingLayers: 00000000fff73af7115af632c5742c856588afc1e55ae6e6
+  m_LightCookieSprite: {fileID: 0}
+  m_DeprecatedPointLightCookieSprite: {fileID: 0}
+  m_LightOrder: 0
+  m_AlphaBlendOnOverlap: 0
+  m_OverlapOperation: 0
+  m_NormalMapDistance: 3
+  m_NormalMapQuality: 2
+  m_UseNormalMap: 0
+  m_ShadowIntensityEnabled: 0
+  m_ShadowIntensity: 0.75
+  m_ShadowVolumeIntensityEnabled: 0
+  m_ShadowVolumeIntensity: 0.75
+  m_LocalBounds:
+    m_Center: {x: 0, y: -0.00000011920929, z: 0}
+    m_Extent: {x: 0.9985302, y: 0.99853027, z: 0}
+  m_PointLightInnerAngle: 360
+  m_PointLightOuterAngle: 360
+  m_PointLightInnerRadius: 1.5
+  m_PointLightOuterRadius: 7.82
+  m_ShapeLightParametricSides: 5
+  m_ShapeLightParametricAngleOffset: 0
+  m_ShapeLightParametricRadius: 1
+  m_ShapeLightFalloffSize: 0.5
+  m_ShapeLightFalloffOffset: {x: 0, y: 0}
+  m_ShapePath:
+  - {x: -0.5, y: -0.5, z: 0}
+  - {x: 0.5, y: -0.5, z: 0}
+  - {x: 0.5, y: 0.5, z: 0}
+  - {x: -0.5, y: 0.5, z: 0}
 --- !u!1 &8110757194724132097
 GameObject:
   m_ObjectHideFlags: 0
@@ -472,7 +735,7 @@ GameObject:
   - component: {fileID: 6959337668583553549}
   - component: {fileID: 5654650728116670435}
   - component: {fileID: 7951636751682061866}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -545,7 +808,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1423561380344584140}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Fill Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -583,6 +846,14 @@ PrefabInstance:
     - target: {fileID: -8989109578766641664, guid: 1ce52e4432435094092d4402ef5f3d84, type: 3}
       propertyPath: health
       value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 119164970667921634, guid: 1ce52e4432435094092d4402ef5f3d84, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 453049445246113922, guid: 1ce52e4432435094092d4402ef5f3d84, type: 3}
+      propertyPath: m_PointLightInnerRadius
+      value: 3.5
       objectReference: {fileID: 0}
     - target: {fileID: 1908775757296018979, guid: 1ce52e4432435094092d4402ef5f3d84, type: 3}
       propertyPath: m_LocalPosition.x
@@ -624,9 +895,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1926891226827855552, guid: 1ce52e4432435094092d4402ef5f3d84, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4623615867959237693, guid: 1ce52e4432435094092d4402ef5f3d84, type: 3}
       propertyPath: m_Layer
-      value: 6
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5259405195154327015, guid: 1ce52e4432435094092d4402ef5f3d84, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5953082353782642603, guid: 1ce52e4432435094092d4402ef5f3d84, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.56
+      objectReference: {fileID: 0}
+    - target: {fileID: 5953082353782642603, guid: 1ce52e4432435094092d4402ef5f3d84, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.2
       objectReference: {fileID: 0}
     - target: {fileID: 6233226784724586597, guid: 1ce52e4432435094092d4402ef5f3d84, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -646,11 +933,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7512486190464630543, guid: 1ce52e4432435094092d4402ef5f3d84, type: 3}
       propertyPath: m_Layer
-      value: 6
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7512486190464630543, guid: 1ce52e4432435094092d4402ef5f3d84, type: 3}
       propertyPath: m_TagString
-      value: Building
+      value: Tavern
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 3931410791608775510, guid: 1ce52e4432435094092d4402ef5f3d84, type: 3}

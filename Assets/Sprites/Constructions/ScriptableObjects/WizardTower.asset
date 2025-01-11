@@ -21,6 +21,6 @@ MonoBehaviour:
   woodCost: 10
   stoneCost: 10
   maxAmount: 4
-  placedAmount: 0
+  placedAmount: 1
   isRotatable: 0
   descriptionString: Attacks the enemies automatically with magic attacks.

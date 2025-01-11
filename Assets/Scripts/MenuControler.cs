@@ -14,6 +14,7 @@ public class MenuControler : MonoBehaviour
     public GameObject PauseScreen;
     public GameObject Ui;
     public bool IsPaused = false;
+    [SerializeField] GameObject controlsTab;
 
     // variaveis do sistema de construcao
     public GameObject BuildingGridSystem;
@@ -39,17 +40,19 @@ public class MenuControler : MonoBehaviour
 
     public GameObject InventoryUI;
 
-    public Text GlueDisplay;
-    public Text WoodDisplay;
-    public Text StoneDisplay;
-    public Image DisplayBPotion;
-    public Image DisplayOPotion;
-    public Text BuffPotionCount;
-    public Text OfensivePotionCount;
+    public TMP_Text GlueDisplay;
+    public TMP_Text WoodDisplay;
+    public TMP_Text StoneDisplay;
+    public TMP_Text BossDropDisplay;
+    public TMP_Text BuffPotionCount;
+    public TMP_Text OfensivePotionCount;
 
-    public Text axeDamageCount;
-    public Text crossbowDamageCount;
-    public Text staffDamageCount;
+    public TMP_Text BuffPotionCountUI;
+    public TMP_Text OfensivePotionCountUI;
+
+    public TMP_Text axeDamageCount;
+    public TMP_Text crossbowDamageCount;
+    public TMP_Text staffDamageCount;
 
     public GameObject HealingPotion;
     public GameObject LightningPotion;
@@ -95,17 +98,8 @@ public class MenuControler : MonoBehaviour
         crossbowDamageCount.text = crossbowWeaponComponent.weaponDmg.ToString();
         staffDamageCount.text = staffWeaponComponent.weaponDmg.ToString();
 
-        //Potion Inventory UI
-        if (playerInventory.buffPotions = HealingPotion)
-        {
-            DisplayBPotion.sprite = HealingPotionImage;
-
-        }
-        if (playerInventory.ofensivePotions = LightningPotion)
-        {
-            DisplayOPotion.sprite = LightningPotionImage;
-
-        }
+        BuffPotionCountUI.text = playerInventory.buffPotionsCount.ToString();
+        OfensivePotionCountUI.text = playerInventory.ofensivePotionsCount.ToString();
 
         //Wepon Inventory UI
         WeaponSwitching weaponSwitching = Aim.GetComponent<WeaponSwitching>();
@@ -128,8 +122,12 @@ public class MenuControler : MonoBehaviour
         }
 
         //Open Build System UI
-        if (Input.GetKeyDown(KeyCode.C))
+        if (Input.GetKeyDown(KeyCode.C) && IsPaused == false && IsInventoryOpen == false)
         {
+            if (Time.timeScale == 0)
+            {
+                return;
+            }
             if (IsBuilding == false && WaveSpawner.waveComplete)
             {
                 IsBuilding = true;
@@ -262,5 +260,15 @@ public class MenuControler : MonoBehaviour
             axeWeaponComponent.ResetIsAttacking();
             axeWeaponComponent.attackBlocked = false;
         }
+    }
+
+    public void ControlTab()
+    {
+        controlsTab.SetActive(true);
+    }
+
+    public void ExitControlTab()
+    {
+        controlsTab.SetActive(false);
     }
 }

@@ -15,13 +15,13 @@ MonoBehaviour:
   nameString: Alchemist
   prefab: {fileID: 7395203165080820899, guid: cc731b6b07aad8649bed4ab4a81740c2, type: 3}
   visual: {fileID: 2427015264046036288, guid: a2396727fa8f56e449825d4c8becc812, type: 3}
-  height: 2
+  height: 1
   width: 2
   glueCost: 5
   woodCost: 3
   stoneCost: 0
   maxAmount: 1
-  placedAmount: 0
+  placedAmount: 1
   isRotatable: 0
   descriptionString: Allows the player to buy potions that can be used to heal the
     player or attack enemies.

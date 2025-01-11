@@ -6,23 +6,28 @@ using UnityEngine.Video;
 
 public class CrossbowScript : MonoBehaviour
 {
-    private float targetingRange = 20f;
+    public float targetingRange = 20f;
     [SerializeField] private LayerMask enemyMask;
     [SerializeField] private GameObject projectile;
     [SerializeField] private Transform firingPoint;
 
     [SerializeField] private float fireRate = 1f;
 
+    public float projectileAngleRotation = 0f;
+
+    public float projectileSpeed = 15f;
+    public float lifetime = 5f;
+
     private Transform target;
     private float timeUntilFire;
 
     // Start is called before the first frame update
-   /* private void OnDrawGizmosSelected()
-    {
-        Handles.color = Color.cyan;
-        Handles.DrawWireDisc(firingPoint.position, transform.forward, targetingRange);
-    }
-   */
+    /* private void OnDrawGizmosSelected()
+     {
+         Handles.color = Color.cyan;
+         Handles.DrawWireDisc(firingPoint.position, transform.forward, targetingRange);
+     }
+    */
     // Update is called once per frame
     void Update()
     {
@@ -56,12 +61,28 @@ public class CrossbowScript : MonoBehaviour
 
     private void Shoot()
     {
+        if (target == null) return;
+
         GameObject projectileObj = Instantiate(projectile, firingPoint.position, Quaternion.identity);
-        Debug.Log(target);
-        Bullet projectileScript = projectileObj.GetComponent<Bullet>();
-        projectileScript.SetTarget(target);
+
+        Vector3 direction = target.position - firingPoint.position;
+        direction.Normalize();
+
+        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+        projectileObj.transform.rotation = Quaternion.Euler(0, 0, angle + projectileAngleRotation);
+
+        Rigidbody2D rb = projectileObj.GetComponent<Rigidbody2D>();
+        if (rb != null)
+        {
+            rb.velocity = direction * projectileSpeed;
+        }
+
+
+
+        Destroy(projectileObj, lifetime);
 
     }
+
 
     private bool CheckTargetIsInRange()
     {

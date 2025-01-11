@@ -10,6 +10,7 @@ TagManager:
   - Tavern
   - Weapon
   - InactiveBuilding
+  - VFX
   layers:
   - Default
   - TransparentFX
@@ -22,9 +23,9 @@ TagManager:
   - Projectile
   - Drop
   - InactiveBuilding
-  - 
-  - 
-  - 
+  - VFX
+  - EdgeMapColisions
+  - Tree
   - 
   - 
   - 
@@ -61,4 +62,7 @@ TagManager:
     locked: 0
   - name: UI
     uniqueID: 3873856229
+    locked: 0
+  - name: VFX
+    uniqueID: 2907316311
     locked: 0

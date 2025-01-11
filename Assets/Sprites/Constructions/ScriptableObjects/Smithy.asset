@@ -15,7 +15,7 @@ MonoBehaviour:
   nameString: Smithy
   prefab: {fileID: 7395847967958696692, guid: 35c8c5d1e2c59c74eaa9d57197a8abe6, type: 3}
   visual: {fileID: 5436411898447264802, guid: ca664217c8e6cd34a966a59f2a7aec17, type: 3}
-  height: 2
+  height: 1
   width: 2
   glueCost: 5
   woodCost: 2

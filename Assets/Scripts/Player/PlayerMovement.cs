@@ -49,4 +49,13 @@ public class PlayerMovement : MonoBehaviour
         anim.SetFloat("Speed", moveDirection.sqrMagnitude);
 
     }
+
+    public void ResetMovement()
+    {
+        moveDirection = Vector2.zero;
+        if (rb != null)
+        {
+            rb.velocity = Vector2.zero;
+        }
+    }
 }

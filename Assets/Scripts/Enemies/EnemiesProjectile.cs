@@ -17,7 +17,7 @@ public class EnemiesProjectile : MonoBehaviour
             }
             Destroy(gameObject);
         }
-        else if (other.CompareTag("Building") && other.tag != "InactiveBuilding")
+        else if (other.CompareTag("Building") || other.CompareTag("Tavern") && other.tag != "InactiveBuilding")
         {
             Building building = other.GetComponent<Building>();
             if (building != null)

@@ -35,13 +35,11 @@ public class LightsManager : MonoBehaviour
 
     void SetLights(bool isActive)
     {
-        // Ativa/desativa luzes globais
         foreach (GameObject light in lights)
         {
             light.SetActive(isActive);
         }
 
-        // Ativa/desativa luzes dos edifícios
         foreach (Light2D buildingLight in buildingLights)
         {
             buildingLight.enabled = isActive;
@@ -57,7 +55,6 @@ public class LightsManager : MonoBehaviour
         }
     }
 
-    // Remove uma luz de edifício da lista
     public void DeregisterBuildingLight(Light2D buildingLight)
     {
         if (buildingLights.Contains(buildingLight))

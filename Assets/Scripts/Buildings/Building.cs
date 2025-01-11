@@ -21,7 +21,7 @@ public class Building : MonoBehaviour
     private string originalTag;
     private int originalLayer;
 
-    public Light2D buildingLight; // A luz 2D do edifício
+    public List<Light2D> buildingLights;
     private LightsManager lightManager;
 
     void Start()
@@ -42,14 +42,20 @@ public class Building : MonoBehaviour
         {
             prefabVisualRenderer = GetComponentInChildren<SpriteRenderer>();
         }
-
-        if (buildingLight != null)
+        if (buildingLights != null && buildingLights.Count > 0)
         {
-            buildingLight.enabled = false;
+            foreach (Light2D light in buildingLights)
+            {
+                light.enabled = false;
+            }
+
             lightManager = FindObjectOfType<LightsManager>();
             if (lightManager != null)
             {
-                lightManager.RegisterBuildingLight(buildingLight);
+                foreach (Light2D light in buildingLights)
+                {
+                    lightManager.RegisterBuildingLight(light);
+                }
             }
         }
     }
@@ -138,10 +144,12 @@ public class Building : MonoBehaviour
 
     void OnDestroy()
     {
-        if (lightManager != null && buildingLight != null)
+        if (lightManager != null && buildingLights != null)
         {
-            // Remove a luz do edifício do LightManager ao destruir o edifício
-            lightManager.DeregisterBuildingLight(buildingLight);
+            foreach (Light2D light in buildingLights)
+            {
+                lightManager.DeregisterBuildingLight(light);
+            }
         }
     }
 

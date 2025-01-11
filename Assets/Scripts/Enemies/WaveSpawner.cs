@@ -46,6 +46,10 @@ public class WaveSpawner : MonoBehaviour
 
     void Update()
     {
+        if (tutorialManager != null && !tutorialManager.isSecondDialogueFinished)
+        {
+            return;
+        }
         if (currWave == 10 && !bossSpawned)
         {
             SpawnBoss();
@@ -88,6 +92,11 @@ public class WaveSpawner : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.Return))
             {
+                if (Time.timeScale == 0)
+                {
+                    return;
+                }
+
                 currWave++;
                 bossSpawned = false;
                 finalBossSpawned = false;

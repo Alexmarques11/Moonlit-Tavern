@@ -15,11 +15,6 @@ public class MainMenu : MonoBehaviour
 
     public void Update()
     {
-        if (controls == true && Input.GetMouseButtonDown(0))
-        {
-            controlsTab.SetActive(false);
-            controls = false;
-        }
     }
 
     public void ControlTab()
@@ -28,9 +23,15 @@ public class MainMenu : MonoBehaviour
         controls = true;
     }
 
-   public void QuitGame()
+    public void QuitGame()
     {
         Application.Quit();
+    }
+
+    public void ExitControlTab()
+    {
+        controlsTab.SetActive(false);
+        controls = false;
     }
 
 }

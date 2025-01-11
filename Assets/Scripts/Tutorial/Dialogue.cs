@@ -12,7 +12,7 @@ public class Dialogue : MonoBehaviour
     private int index;
     private bool isTyping;
 
-    public PlayerMovement playerMovement;
+    public GameObject player;
     public GameObject aim;
     public TutorialManager tutorialManager;
 
@@ -43,11 +43,14 @@ public class Dialogue : MonoBehaviour
     {
         IsDialogueActive = true;
 
+        PlayerMovement playerMovement = player.GetComponent<PlayerMovement>();
         if (playerMovement != null)
         {
+            playerMovement.rb.velocity = Vector2.zero;
+            playerMovement.ResetMovement();
             playerMovement.enabled = false;
-            playerMovement.moveSpeed = 0f;
         }
+
         if (aim != null)
         {
             aim.SetActive(false);
@@ -56,6 +59,7 @@ public class Dialogue : MonoBehaviour
         index = 0;
         StartCoroutine(TypeLine());
     }
+
 
     IEnumerator TypeLine()
     {
@@ -80,11 +84,7 @@ public class Dialogue : MonoBehaviour
         }
         else
         {
-            if (playerMovement != null)
-            {
-                playerMovement.enabled = true;
-                playerMovement.moveSpeed = 7f;
-            }
+            player.GetComponent<PlayerMovement>().enabled = true;
             if (aim != null)
             {
                 aim.SetActive(true);

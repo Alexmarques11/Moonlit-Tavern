@@ -62,6 +62,12 @@ public class TavernMenu : MonoBehaviour
     private void Update()
     {
         UpdateMenu();
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+           gameObject.SetActive(false);
+        }
+
     }
 
     private void UpdateMenu()

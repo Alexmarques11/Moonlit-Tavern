@@ -50,6 +50,10 @@ public class EnemyRangedAttack : MonoBehaviour
 
         Vector2 direction = (target.position + targetPositionOffset - transform.position).normalized;
 
+        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+        projectile.transform.rotation = Quaternion.Euler(0, 0, angle);
+
+
         Rigidbody2D rb = projectile.GetComponent<Rigidbody2D>();
         if (rb != null)
         {

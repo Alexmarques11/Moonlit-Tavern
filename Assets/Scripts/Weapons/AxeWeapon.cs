@@ -16,7 +16,7 @@ public class AxeWeapon : MonoBehaviour
     private const float attackingResetDelay = 1f;
 
     private float attackBlockedResetTime = 0f;
-    private const float attackBlockedResetDelay = 1f;
+    private const float attackBlockedResetDelay = 1.5f;
 
     private void Update()
     {
@@ -73,7 +73,6 @@ public class AxeWeapon : MonoBehaviour
     public void ResetIsAttacking()
     {
         IsAttacking = false;
-        Debug.Log("IsAttacking reset to false");
     }
 
     public void OnPlayerDeath()

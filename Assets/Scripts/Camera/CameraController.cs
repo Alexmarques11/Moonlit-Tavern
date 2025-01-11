@@ -28,13 +28,13 @@ public class CameraController : MonoBehaviour
     {
         if (bossSpawned == false && caroutineFinished == false)
         {
-            transform.position = new Vector3(Mathf.Clamp(target.position.x, -44f, 44f), Mathf.Clamp(target.position.y, -52f, 52f), transform.position.z);
+            transform.position = new Vector3(Mathf.Clamp(target.position.x, -46f, 46f), Mathf.Clamp(target.position.y, -55f, 50f), transform.position.z);
         }
         if (bossSpawned == true && caroutineFinished == false)
         {
             BossSpawn();
         }
-        if (bossSpawned == false && caroutineFinished == true) 
+        if (bossSpawned == false && caroutineFinished == true)
         {
             ReturnPlayer();
         }

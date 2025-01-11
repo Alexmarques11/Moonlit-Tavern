@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.VFX;
 
 public class FakeHeight : MonoBehaviour
 {
@@ -15,6 +16,8 @@ public class FakeHeight : MonoBehaviour
     public GameObject body;
     public GameObject shadow;
     public GameObject temporaryEfect;
+
+    public VisualEffect lightningEffect;
 
     public float delay = 1f;
 
@@ -74,7 +77,7 @@ public class FakeHeight : MonoBehaviour
 
         //}
 
-        Destroy(gameObject, 0.5f);
+        Destroy(gameObject, 1f);
     }
 
     //IEnumerator delayDestroy()
@@ -85,9 +88,12 @@ public class FakeHeight : MonoBehaviour
     public void Explosion()
     {
 
-        body.SetActive(false);
+        body.GetComponent<SpriteRenderer>().enabled = false;
         shadow.SetActive(false);
-        temporaryEfect.SetActive(true);
+
+        lightningEffect.Play();
+        //temporaryEfect.SetActive(true);
+
         objectPotion.GetComponent<Collider2D>().enabled = true;
     }
 

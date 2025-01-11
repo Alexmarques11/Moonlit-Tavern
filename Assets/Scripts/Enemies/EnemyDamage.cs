@@ -34,7 +34,7 @@ public class Damage : MonoBehaviour
                     playerHealth.health -= damage;
                 }
             }
-            else if (other.CompareTag("Building") && other.tag != "InactiveBuilding")
+            else if ((other.CompareTag("Building") || other.CompareTag("Tavern")) && other.tag != "InactiveBuilding")
             {
                 Building building = other.GetComponent<Building>();
                 if (building != null)
@@ -50,7 +50,7 @@ public class Damage : MonoBehaviour
         if (Time.time >= lastAttackTime + attackInterval && !isAttacking)
         {
             if ((other.gameObject.CompareTag("Player")) ||
-                (other.gameObject.CompareTag("Building") && other.gameObject.tag != "InactiveBuilding"))
+                ((other.gameObject.CompareTag("Building") || other.gameObject.CompareTag("Tavern")) && other.gameObject.tag != "InactiveBuilding"))
             {
                 isAttacking = true;
                 lastAttackTime = Time.time;

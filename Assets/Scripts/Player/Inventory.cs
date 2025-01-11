@@ -25,6 +25,9 @@ public class Inventory : MonoBehaviour
     [SerializeField]
     private GameObject lightningPotion;
 
+    [SerializeField]
+    private ParticleSystem healingParticleEffect;
+
     PlayerHealth playerHealth;
 
 
@@ -34,7 +37,7 @@ public class Inventory : MonoBehaviour
 
     void Awake()
     {
-        playerHealth  = gameObject.GetComponent<PlayerHealth>();
+        playerHealth = gameObject.GetComponent<PlayerHealth>();
     }
 
     public void GetResources(string dropName, int value)
@@ -75,21 +78,26 @@ public class Inventory : MonoBehaviour
 
     public void UseBuffPotion()
     {
-        if(buffPotions == healingPotion)
+        if (buffPotions == healingPotion && buffPotionsCount > 0)
         {
+            if (healingParticleEffect != null)
+            {
+                healingParticleEffect.Play();
+            }
+
             buffPotionsCount = buffPotionsCount - 1;
-            playerHealth.RestoreHealth(playerHealth.maxHealth/2);
+            playerHealth.RestoreHealth(playerHealth.maxHealth / 2);
         }
     }
 
     public void UseOfensivePotion()
     {
-        if(ofensivePotions == lightningPotion)
+        if (ofensivePotions == lightningPotion)
         {
             ofensivePotionsCount = ofensivePotionsCount - 1;
             GameObject instantiatedLightningPotion = Instantiate(lightningPotion, FirePoint.position, Quaternion.identity);
             instantiatedLightningPotion.GetComponent<FakeHeight>().Initialize(FirePoint.right * Random.Range(groundDispenseVelocity.x, groundDispenseVelocity.y), Random.Range(verticalDispenseVelocity.x, verticalDispenseVelocity.y));
-            
+
         }
     }
 

@@ -130,7 +130,8 @@ MonoBehaviour:
   health: 0
   maxHealth: 100
   healthBar: {fileID: 9089851787655321925}
-  prefabVisualRenderer: {fileID: 5708841560533458869}
+  prefabVisualRenderer: {fileID: 0}
+  buildingLights: []
 --- !u!114 &5228248399445654705
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -143,12 +144,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56ac398fa65b24241b2c2ad152b98fac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetingRange: 20
   enemyMask:
     serializedVersion: 2
     m_Bits: 128
   projectile: {fileID: 5169930685636165813, guid: 00d948cff92d32d4fb5704dbcb79a4ba, type: 3}
   firingPoint: {fileID: 7190420261419575044}
   fireRate: 0.5
+  projectileAngleRotation: -45
+  projectileSpeed: 15
+  lifetime: 2
 --- !u!61 &4146375216532131419
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -181,7 +186,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 2, y: 2}
+  m_Offset: {x: 1.9785566, y: 1.801726}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -192,7 +197,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 4, y: 4}
+  m_Size: {x: 2.6286602, y: 3.4034517}
   m_EdgeRadius: 0
 --- !u!114 &4331629871582829114
 MonoBehaviour:
@@ -206,6 +211,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63ee1d15b286f494897ca9d4f5285bc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  placedObjectType: {fileID: 0}
 --- !u!50 &3735216997780746437
 Rigidbody2D:
   serializedVersion: 4
@@ -438,7 +444,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -223.79, y: -122.61}
+  m_AnchoredPosition: {x: -224.01, y: -118.44}
   m_SizeDelta: {x: 160, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2671830645165264297
@@ -648,10 +654,5 @@ PrefabInstance:
 --- !u!4 &2712506060085387124 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 69717170964000813, guid: e447072fe63f7e94f8b6c28606764e46, type: 3}
-  m_PrefabInstance: {fileID: 2689614924953825113}
-  m_PrefabAsset: {fileID: 0}
---- !u!212 &5708841560533458869 stripped
-SpriteRenderer:
-  m_CorrespondingSourceObject: {fileID: 7668099237856637164, guid: e447072fe63f7e94f8b6c28606764e46, type: 3}
   m_PrefabInstance: {fileID: 2689614924953825113}
   m_PrefabAsset: {fileID: 0}

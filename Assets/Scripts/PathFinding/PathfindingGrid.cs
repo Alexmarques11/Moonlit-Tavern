@@ -5,7 +5,6 @@ using UnityEngine;
 public class PathfindingGrid : MonoBehaviour
 {
     public bool displayGridGizmos;
-    //public Transform enemies;
     public LayerMask unwalkableMask;
     public Vector2 gridWorldSize;
     public float nodeRadius;
